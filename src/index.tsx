@@ -94,6 +94,7 @@ const OtpInputs = forwardRef<OtpInputsRef, Props>(
       selectTextOnFocus,
       style,
       testIDPrefix,
+      autoFocus,
       ...restProps
     },
     ref,
@@ -241,6 +242,7 @@ const OtpInputs = forwardRef<OtpInputsRef, Props>(
 
         return (
           <OtpInput
+            autoFocus={autoFocus && index === 0}
             autoCapitalize={autoCapitalize}
             clearTextOnFocus={clearTextOnFocus}
             firstInput={index === 0}
